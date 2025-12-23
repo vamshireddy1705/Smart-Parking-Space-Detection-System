@@ -1,52 +1,101 @@
 # 🚗 Smart Parking Space Detection System
 
-A Java + OpenCV based computer vision project that detects parking slot availability from an image and visually marks each slot as **EMPTY** or **FILLED**.
+A Java and OpenCV based computer vision project that automatically detects **empty** and **occupied** parking slots from a parking lot image using image processing techniques.
 
-This project demonstrates the practical use of **image processing**, **ROI (Region of Interest)** handling, and **pixel intensity analysis** for real-world smart city applications.
+This project addresses real-world parking problems and can be extended for smart city applications.
+
+---
+
+## 📌 Problem Statement
+In malls, offices, and public parking areas, drivers spend a lot of time searching for available parking spaces.  
+Manual monitoring is inefficient and error-prone.  
+This project aims to **automate parking space detection** using image processing.
+
+---
+
+## 🎯 Project Objective
+- Automatically detect parking slot availability  
+- Reduce time spent searching for parking  
+- Provide a clear visual representation of parking status  
 
 ---
 
 ## 🛠️ Technologies Used
-- Java
-- OpenCV
-- Eclipse IDE
-- Image Processing
+- Java  
+- OpenCV  
+- Eclipse IDE  
+- Image Processing  
+- Git & GitHub  
 
 ---
 
-## 📌 Features
-- Detects empty and filled parking slots from an image
-- Slot selection using fixed coordinates
-- Color-coded output:
-  - 🟢 Green → Empty slot
-  - 🔴 Red → Filled slot
-- Console summary of total, empty, and filled slots
+## ⚙️ System Workflow
+1. Load the parking lot image as input  
+2. Define parking slot coordinates using rectangle values  
+3. Extract each parking slot as a Region of Interest (ROI)  
+4. Convert ROI to grayscale  
+5. Calculate mean pixel intensity  
+6. Apply threshold-based logic to classify slots  
+7. Display visual and console output  
 
 ---
 
-## ▶️ How It Works
-1. Input parking image is loaded
-2. Parking slots are defined using rectangle coordinates
-3. Each slot is converted to grayscale
-4. Mean pixel intensity is calculated
-5. Slot status is decided based on a threshold
-6. Output is displayed visually and in console
+## 🔍 Key Concepts Used
+- Image Processing  
+- Region of Interest (ROI)  
+- Grayscale Conversion  
+- Pixel Intensity Analysis  
+- Threshold-based Classification  
+- OpenCV Mat Operations  
+
+---
+
+## ✨ Features
+- Detects empty and occupied parking slots from an image  
+- Color-coded visualization:  
+  - 🟢 Green → Empty Slot  
+  - 🔴 Red → Filled Slot  
+- Console output showing:  
+  - Total parking slots  
+  - Empty slots  
+  - Occupied slots  
 
 ---
 
 ## ▶️ Output
-- Visual output window showing parking slots
-- Console output with total, empty and filled slots
+- Visual output window displaying parking slots with bounding boxes  
+- Console output showing total, empty, and filled slots  
+
+---
+
+## ⚠️ Limitations
+- Works on static images only  
+- Parking slots are manually defined  
+- Accuracy may vary under different lighting conditions  
 
 ---
 
 ## 🚀 Future Enhancements
-- Real-time camera/video support
-- Machine Learning based detection
-- Web or mobile dashboard
+- Real-time video or CCTV camera integration  
+- Automatic slot detection using Machine Learning  
+- Web or mobile dashboard integration  
+- IoT-based smart parking system  
 
 ---
 
-## 👤 Author
-**Vamshi Reddy Vangal**  
-GitHub: https://github.com/vamshireddy1705
+## 📂 Project Structure
+Smart-Parking-Space-Detection-System
+│
+├── src/
+│   └── detection/
+│       ├── DetectionConfig.java
+│       ├── Slot.java
+│       ├── SlotSelector.java
+│       ├── SlotStatusDetector.java
+│       └── TestOpenCV.java
+│
+├── parking.jpg
+├── slots.txt
+├── README.md
+
+
